@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+        font-size: 65.2%;
+    }
+
+        input, textarea {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #header {
+            box-sizing: border-box;
+            height: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #e7e7e7;
+
+        }
+
+        #header #logo {
+            width: 10rem;
+        }
+
+        #header #logo a img {
+            display: block;
+            width: 100%;
+        }
+
+        #menu {
+            display: flex;
+            padding: 0rem 4rem 8rem 4rem;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            top: 70px;
+            right: 0px;
+            background: #fff;
+            transition: 300ms;
+            z-index: 1000;
+
+            height: auto;
+            visibility: hidden;
+            /*overflow-y: hidden;*/
+            border-bottom: 2px solid #ADACAC;
+            border-radius: 0 0 2rem 2rem;
+        }
+
+        h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 3.6rem;
+            line-height: 42px;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 2.6rem;
+            line-height: 34px;
+
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1.6rem;
+
+            margin-bottom: 2rem;
+        }
+
+        #nav.active #menu {
+            height: calc(100vh - 70px);
+            visibility: visible;
+           /* overflow-y: auto;*/
+        }
+
+        #menu a {
+            padding: 1rem 0;
+            margin: 0 1rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        }
+
+        #btn-mobile {
+            display: flex;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+
+        #hamburger {
+            border-top: 2px solid;
+            width: 20px;
+        }
+
+        #hamburger::after,
+        #hamburger::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            margin-top: 5px;
+            transition: 300ms;
+            position: relative;
+        }
+
+        #nav.active #hamburger {
+            border-top-color: transparent;
+        }
+
+        #nav.active #hamburger::before {
+            transform: rotate(135deg);
+        }
+
+        #nav.active #hamburger::after {
+            transform: rotate(-135deg);
+            top: -7px;
+        }
+
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+        4
+        .input-wrapper label,
+        .checkbox-wrapper label {
+            font-size: 1.7rem;
+            line-height: 24px;
+            font-weight: 400;
+
+            color: #505050;
+            margin-right: 8px;
+        }
+
+        .input-wrapper label span {
+            margin-left: 12px;
+            font-size: 1.5rem;
+            line-height: 20px;
+            color: #a9a7af;
+        }
+
+        .input-wrapper label span:hover {
+            color: #6c6a71;
+        }
+
+        .input-wrapper input,
+        .input-wrapper textarea {
+            background: white;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+
+            height: 56px;
+
+            padding: 1rem;
+
+            font-size: 16px;
+            line-height: 26px;
+
+            color: #a9a7af;
+        }
+
+        input:disabled {
+            background-color: #f7f7f7;
+        }
+
+        .input-wrapper textarea {
+            padding: 1rem;
+            height: 168px;
+        }
+
+        .checkbox-wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .checkbox-wrapper label {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            gap: 16px;
+        }
+
+        .checkbox-wrapper input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            opacity: 0;
+        }
+
+        .checkbox-wrapper label::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            display: block;
+
+            border: 1px solid #363636;
+            border-radius: 8px;
+        }
+
+        .checkbox-wrapper input:checked + label::before {
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.002 6.99984L19.5902 5.58984L9.00016 16.1698Z' fill='%2342D3FF'/%3E%3C/svg%3E");
+        }
+
+        .checkbox-wrapper input:focus + label::before {
+            outline: 2px solid black;
+        }
+         
+        .button-wrapper {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        #meu-botao {
+            padding: 2rem 4rem;
+            font-size: 2rem;
+            border-radius: 0.8rem;
+        }
